@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="FYMThingie.vcxproj" Id="579625a9-6b4e-47c1-9c8f-c49bead4f661" />
+</Solution>
