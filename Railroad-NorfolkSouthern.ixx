@@ -28,12 +28,17 @@ export class NorfolkSouthern : public Railroad
 
 )";
 	}
+
 	virtual bool ValidateTrainSymbol(string_view symbol) override
 	{
-		// Example validation: Norfolk Southern train symbols typically start with "NS"
-		if (symbol.rfind("NS", 0) == 0) {
-			return true;
-		}
-		return false;
+		if (symbol.empty() || !isdigit(symbol[0]))
+			return false;
+		isIntermodal = symbol[0] == '2';
+		return true;
+	}
+
+	virtual constexpr string SymbolHelp() const override
+	{
+		return "Should start with a digit (intermodal starts with '2')";
 	}
 };
