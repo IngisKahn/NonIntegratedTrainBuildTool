@@ -4,9 +4,18 @@ import std;
 using namespace std;
 
 export class Region
-{
-	
+{	
 public:
+	
+};
+
+export struct TrainData
+{
+	string Symbol;
+	uint32_t LengthFeet{ 0 };
+	uint32_t WeightTons{ 0 };
+	bool IsIntermodal{ false };
+	bool IsDistriputedPower{ false };
 };
 
 export class Railroad 
